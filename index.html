@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="fr">
+  
+<head>
+  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mouad BRAHMI - Portfolio</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --dark-color: #1e293b;
+            --light-color: #f8fafc;
+        }
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            line-height: 1.8;
+            color: var(--dark-color);
+        }
+        .hero-section {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            display: flex;
+            align-items: center;
+            padding: 100px 0;
+        }
+        .section-title {
+            position: relative;
+            color: var(--primary-color);
+            margin-bottom: 3rem;
+            padding-bottom: 1rem;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--primary-color);
+        }
+        .card {
+            border: none;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        .experience-item {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 2rem;
+        }
+        .experience-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--primary-color);
+        }
+        .skill-tag {
+            background: var(--light-color);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            margin: 0.25rem;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+        .skill-tag:hover {
+            background: #e2e8f0;
+        }
+        .interest-icon {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        .nav-link {
+            position: relative;
+            padding: 0.5rem 1rem;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-color);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+        .nav-link:hover::after {
+            width: 80%;
+        }
+        
+
+        .skills-section {
+            background-color: (--light-color);;
+            color: white;
+            padding: 6rem 0;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 2rem;
+            justify-items: center;
+        }
+        
+        .skill-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .skill-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .skill-icon {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 1rem;
+        }
+        
+        .skill-name {
+            color: var(--dark-color);
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+
+        .section-title.light {
+            color: white;
+        }
+        
+        .section-title.light::after {
+            background: white;
+        }
+    </style>
+    <style>
+.footer {
+  background-color: var(--light-color); 
+  color: var(--dark-color);
+    padding: 2rem 0; 
+    border-top: 4px solid #2563eb;
+}
+
+.footer-title {
+  color: var(--primary-color);
+    font-size: 1.2rem;
+    margin-bottom: 1rem; 
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.5rem; 
+}
+
+.footer-links a {
+    color: var(--dark-color);;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+.social-links {
+    display: flex;
+    gap: 0.75rem; 
+    margin-top: 1rem; 
+}
+
+.social-icon {
+    width: 36px;
+    height: 36px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #1e293b;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-2px); 
+}
+
+.footer-bottom {
+    border-top: 1px solid #1e293b;
+    margin-top: 2rem; 
+    padding-top: 1rem; 
+    text-align: center;
+}
+
+.footer-bottom p {
+    margin: 0;
+    color: #64748b;
+    font-size: 0.9rem; 
+    line-height: 1.4; 
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.75rem; 
+}
+
+.contact-info i {
+    margin-right: 0.5rem; 
+    color: var(--primary-color);
+}
+
+
+
+  </style>
+</head>
+<body>
+  
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">MB</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">À propos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Expérience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#education">Formation</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Compétences</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projets</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#interests">Centres d'intérêts</a></li>
+                    
+                        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">MB</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">À propos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Expérience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#education">Formation</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Compétences</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projets</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#interests">Centres d'intérêts</a></li>
+                    
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-section" id="about">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <span class="badge bg-primary mb-3">Étudiant en Informatique</span>
+                    <h1 class="display-4 fw-bold mb-4">Mouad BRAHMI</h1>
+                    <p class="lead mb-4">Actuellement en dernière année de Licence Informatique, je suis à la
+                        recherche d’un stage de 2 mois à partir d'avril 2025. Curieux et motivé, je
+                        souhaite intégrer une équipe dynamique où je pourrai mettre à profit mes
+                        compétences tout en continuant à apprendre et à évoluer</p>
+                        <div class="d-flex gap-3">
+                            <a href="mailto:mouadbrahmi02@gmail.com" class="btn btn-primary">Me contacter</a>
+                            <a href="images/cv_Mouad_BRAHMI.pdf" class="btn btn-outline-primary" download>Télécharger CV</a>
+                        </div>
+                        
+                </div>
+                <div class="col-lg-6">
+                    <img src="images/PHOTOS.jpg" alt="Profile" class="img-fluid rounded-3 shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5" id="experience">
+        <div class="container">
+            <h2 class="section-title">Expérience Professionnelle</h2>
+            <div class="experience-item">
+                <h3 class="h5">Co-Fondateur et Gérant - 
+                    <a href="https://www.develovr.tech" target="_blank" rel="noopener noreferrer">Develovr</a>
+                </h3>
+                <p class="text-muted">Mars 2024 - Présent | Sidi Bel abbés, Algérie</p>
+                <p>Entreprise spécialisée dans la création de solutions logicielles.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-light" id="education">
+        <div class="container">
+            <h2 class="section-title">Formation</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="h5">L3 Informatique</h3>
+                            <p class="text-muted">UBO - Brest | 2024 - Présent</p>
+ 
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="h5">Licence en Systèmes Informatiques</h3>
+                            <p class="text-muted">Université Djilalli liabes - Sidi Bel abbés, Algérie  | 2021 - 2024</p>
+                            
+ 
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="card h-100">
+                      <div class="card-body">
+                          <h3 class="h5">Baccalauréat filière mathématiques</h3>
+                          <p class="text-muted">Lycée Meftahi - Sidi Bel abbés, Algérie | 2021</p>
+
+                      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="skills-section" id="skills">
+      <div class="container">
+          <h2 class="section-title">Technologies</h2>
+          <div class="skills-grid">
+              <div class="skill-item">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg" alt="Android" class="skill-icon">
+                  <span class="skill-name">Android</span>
+              </div>
+              
+              <div class="skill-item">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" alt="Kotlin" class="skill-icon">
+                  <span class="skill-name">Kotlin</span>
+              </div>
+              
+              <div class="skill-item">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" class="skill-icon">
+                  <span class="skill-name">Java</span>
+              </div>
+              
+              <div class="skill-item">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" class="skill-icon">
+                  <span class="skill-name">HTML</span>
+              </div>
+              
+              <div class="skill-item">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" class="skill-icon">
+                  <span class="skill-name">CSS</span>
+              </div>
+              
+              <div class="skill-item">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap" class="skill-icon">
+                  <span class="skill-name">Bootstrap</span>
+              </div>
+              
+              <div class="skill-item">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" class="skill-icon">
+                  <span class="skill-name">PHP</span>
+              </div>
+              
+              <div class="skill-item">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/codeigniter/codeigniter-plain.svg" alt="CodeIgniter" class="skill-icon">
+                  <span class="skill-name">CodeIgniter</span>
+              </div>
+              
+              <div class="skill-item">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C" class="skill-icon">
+                  <span class="skill-name">C</span>
+              </div>
+              
+              <div class="skill-item">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="skill-icon">
+                  <span class="skill-name">Python</span>
+              </div>
+              
+              <div class="skill-item">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" class="skill-icon">
+                  <span class="skill-name">Git</span>
+              </div>
+              
+              <div class="skill-item">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase" class="skill-icon">
+                  <span class="skill-name">Firebase</span>
+              </div>
+              
+              
+              <div class="skill-item">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" class="skill-icon">
+                  <span class="skill-name">MySQL</span>
+              </div>
+              <div class="skill-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mariadb/mariadb-original.svg" alt="MariaDB" class="skill-icon">
+                <span class="skill-name">MariaDB</span>
+            </div>
+            
+          </div>
+      </div>
+  </section>
+
+    <section class="py-5 bg-light" id="projects">
+        <div class="container">
+            <h2 class="section-title">Projets</h2>
+            <div class="row g-4">
+              
+<div class="col-md-6 col-lg-3">
+    <div class="card h-100">
+        <div class="card-body">
+            <h3 class="h5">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#brightMindsModal" class="text-decoration-none text-dark">
+                    BrightMinds
+                </a>
+            </h3>
+            <p class="text-muted mb-3">Application Android d'une plateforme compléte d'E-learning</p>
+            <div class="mb-3">
+                <span class="badge bg-primary">SCRUM</span>
+                <span class="badge bg-primary">UML</span>
+                <span class="badge bg-primary">Kotlin</span>
+                <span class="badge bg-primary">Firebase</span>
+            </div>
+            <div class="d-flex gap-2">
+           
+                <button type="button" data-bs-toggle="modal" data-bs-target="#brightMindsModal" class="btn btn-outline-primary btn-sm">
+                    <i class="fas fa-eye me-1"></i>Détails
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="brightMindsModal" tabindex="-1" aria-labelledby="brightMindsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="brightMindsModalLabel">BrightMinds</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="main-image mb-3">
+                    <img id="brightMindsMainImage" src="images/b2.PNG" class="img-fluid rounded w-100" alt="BrightMinds image principale">
+                </div>
+                <div class="thumbnails d-flex justify-content-center gap-2">
+                    <img src="images/b2.PNG" 
+                         class="thumbnail active" 
+                         onclick="changeImage(this, 'brightMindsMainImage')" 
+                         alt="BrightMinds vue 1"
+                         style="width: 120px; height: 80px; object-fit: cover;">
+                    <img src="images/BX.PNG" 
+                         class="thumbnail" 
+                         onclick="changeImage(this, 'brightMindsMainImage')" 
+                         alt="BrightMinds vue 2"
+                         style="width: 120px; height: 80px; object-fit: cover;">
+                         <img src="images/bx2.PNG" 
+                         class="thumbnail" 
+                         onclick="changeImage(this, 'brightMindsMainImage')" 
+                         alt="BrightMinds vue 2"
+                         style="width: 120px; height: 80px; object-fit: cover;">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    
+    .modal-dialog.modal-lg {
+        max-width: 90vw;  
+        margin: 1.75rem auto;
+    }
+    
+   
+    .modal-content {
+        max-height: 90vh;
+        display: flex;
+        flex-direction: column;
+    }
+    
+ 
+    .modal-body {
+        padding: 0;
+        background-color: #f8f9fa;
+        flex: 1;
+        display: flex;
+        overflow: hidden;
+    }
+    
+ </style>
+                
+<div class="col-md-6 col-lg-3">
+    <div class="card h-100">
+        <div class="card-body">
+            <h3 class="h5">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#olympixModal" class="text-decoration-none text-dark">
+                    OLYMPIX
+                </a>
+            </h3>
+            <p class="text-muted mb-3">Plateforme de concours en ligne</p>
+            <div class="mb-3">
+                <span class="badge bg-primary">SCRUM</span>
+                <span class="badge bg-primary">UML</span>
+                <span class="badge bg-primary">CodeIgniter</span>
+                <span class="badge bg-primary">Bootstrap</span>
+                <span class="badge bg-primary">SQL PSM</span>
+            </div>
+            <div class="d-flex gap-2">
+                <a href="https://github.com/mouadbra/olympix" class="btn btn-outline-primary btn-sm">
+                    <i class="fab fa-github me-1"></i>Code Source
+                </a>
+                <button type="button" data-bs-toggle="modal" data-bs-target="#olympixModal" class="btn btn-outline-primary btn-sm">
+                    <i class="fas fa-eye me-1"></i>Détails
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="olympixModal" tabindex="-1" aria-labelledby="olympixModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="olympixModalLabel">OLYMPIX</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <img id="olympixMainImage" src="images/oll.PNG" class="img-fluid rounded w-100" alt="OLYMPIX image principale">
+                </div>
+                <div class="thumbnail-scroll">
+                    <div class="d-flex gap-2">
+                        <img src="images/oll.PNG"
+                             class="thumbnail active"
+                             onclick="changeImage(this, 'olympixMainImage')"
+                             alt="OLYMPIX vue 1">
+                        <img src="images/1.png"
+                             class="thumbnail"
+                             onclick="changeImage(this, 'olympixMainImage')"
+                             alt="OLYMPIX vue 2">
+                             
+                        <img src="images/3.PNG"
+                             class="thumbnail"
+                             onclick="changeImage(this, 'olympixMainImage')"
+                             alt="OLYMPIX vue 3">
+                        <img src="images/4.PNG"
+                             class="thumbnail"
+                             onclick="changeImage(this, 'olympixMainImage')"
+                             alt="OLYMPIX vue 4">
+                        <img src="images/5.PNG"
+                             class="thumbnail"
+                             onclick="changeImage(this, 'olympixMainImage')"
+                             alt="OLYMPIX vue 5">
+                        <img src="images/8.PNG"
+                             class="thumbnail"
+                             onclick="changeImage(this, 'olympixMainImage')"
+                             alt="OLYMPIX vue 6">
+                        <img src="images/9.PNG"
+                             class="thumbnail"
+                             onclick="changeImage(this, 'olympixMainImage')"
+                             alt="OLYMPIX vue 7">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.thumbnail-scroll {
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+
+.thumbnail {
+    width: 100px;
+    height: 60px;
+    object-fit: cover;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+}
+
+.thumbnail:focus {
+    outline: none;
+}
+
+.thumbnail.active {
+    border: 2px solid #0d6efd;
+}
+</style>
+<div class="modal fade" id="vodModal" tabindex="-1" aria-labelledby="vodModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="vodModalLabel">VOD</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="main-image mb-3">
+                    <img id="vodMainImage" src="images/vod.PNG" class="img-fluid rounded w-100" alt="VOD image principale">
+                </div>
+                <div class="thumbnails d-flex justify-content-center gap-2">
+                    <img src="images/vod.PNG" 
+                         class="thumbnail active" 
+                         onclick="changeImage(this, 'vodMainImage')" 
+                         alt="VOD vue 1"
+                         style="width: 100px; height: 60px; object-fit: cover;">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="tmModal" tabindex="-1" aria-labelledby="tmModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="tmModalLabel">TM</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="main-image mb-3">
+                    <img id="tmMainImage" src="images/tm.PNG" class="img-fluid rounded w-100" alt="TM image principale">
+                </div>
+                <div class="thumbnails d-flex justify-content-center gap-2">
+                    <img src="images/tm.PNG" 
+                         class="thumbnail active" 
+                         onclick="changeImage(this, 'tmMainImage')" 
+                         alt="TM vue 1"
+                         style="width: 100px; height: 60px; object-fit: cover;">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.thumbnail {
+    opacity: 0.6;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 4px;
+}
+
+.thumbnail:hover {
+    opacity: 0.8;
+}
+
+.thumbnail.active {
+    opacity: 1;
+    border-color: #0d6efd;
+}
+
+.main-image {
+    position: relative;
+    background-color: #f8f9fa;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.main-image img {
+    transition: opacity 0.3s ease;
+}
+</style>
+
+<script>
+function changeImage(element, mainImageId) {
+    // Met à jour l'image principale
+    const mainImage = document.getElementById(mainImageId);
+    mainImage.style.opacity = '0';
+    
+    setTimeout(() => {
+        mainImage.src = element.src;
+        mainImage.style.opacity = '1';
+    }, 300);
+    
+    // Met à jour l'état actif des vignettes dans le même modal
+    const modalBody = element.closest('.modal-body');
+    modalBody.querySelectorAll('.thumbnail').forEach(thumb => {
+        thumb.classList.remove('active');
+    });
+    element.classList.add('active');
+}
+
+// Réinitialise les images lors de la fermeture des modaux
+document.querySelectorAll('.modal').forEach(modal => {
+    modal.addEventListener('hidden.bs.modal', function () {
+        const mainImage = this.querySelector('.main-image img');
+        const firstThumb = this.querySelector('.thumbnail');
+        if (mainImage && firstThumb) {
+            mainImage.src = firstThumb.src;
+            this.querySelectorAll('.thumbnail').forEach(thumb => {
+                thumb.classList.remove('active');
+            });
+            firstThumb.classList.add('active');
+        }
+    });
+});
+</script>
+<style>
+.modal-body img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.h5 a:hover {
+    color: #0d6efd !important;
+    text-decoration: underline !important;
+}
+
+.carousel-item {
+    max-height: 80vh;
+}
+
+.carousel-item img {
+    object-fit: contain;
+    background-color: #f8f9fa;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    background-color: rgba(0, 0, 0, 0.1);
+    width: 10%;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.carousel-indicators {
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 10px 0;
+    margin: 0;
+}
+</style>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="h5">VOD</h3>
+                            <p class="text-muted mb-3">Application de gestion de films</p>
+                            <div class="mb-3">
+                                <span class="badge bg-primary">UML</span>
+                                <span class="badge bg-primary">Java</span>
+                                <span class="badge bg-primary">JavaFX</span>
+                            </div>
+                            <a href="https://github.com/mouadbra/vod" class="btn btn-outline-primary btn-sm">
+                                <i class="fab fa-github me-2"></i>Code source
+                            </a>
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#vodModal" class="btn btn-outline-primary btn-sm">
+                                <i class="fas fa-eye me-1"></i>Détails
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                
+
+
+
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="h5">toutlameche</h3>
+                            <p class="text-muted mb-3">Système de prédiction de mots</p>
+                            <div class="mb-3">
+                                <span class="badge bg-primary">C</span>
+                                
+                            </div>
+                            <a href="https://github.com/mouadbra/toutlameche" class="btn btn-outline-primary btn-sm">
+                                <i class="fab fa-github me-2"></i>Code source
+                            </a>
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#tmModal" class="btn btn-outline-primary btn-sm">
+                                <i class="fas fa-eye me-1"></i>Détails
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5" id="interests">
+        <div class="container">
+            <h2 class="section-title">Centres d'Intérêts</h2>
+            <div class="row g-4 text-center">
+                <div class="col-md-4">
+                    <div class="interest-icon">
+                        <i class="fas fa-futbol"></i>
+                    </div>
+                    <h3 class="h5">Football</h3>
+                    <p>Mon sport préféré ,Jouer entre amis et suivre les matchs des grandes compétitions, c’est un vrai plaisir.</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="interest-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <h3 class="h5">Jeux Vidéo</h3>
+                    <p>Jouer aux jeux vidéo, explorer de nouveaux univers et me détendre après une longue journée, c’est ma façon de m’évader.</p>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="interest-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 class="h5">Intelligence Artificielle</h3>
+                    <p>Passionné par le potentiel révolutionnaire de l'intelligence artificielle et curieux de ses impacts sur notre futur.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4 mb-4">
+              <h3 class="footer-title">Navigation Rapide</h3>
+              <div class="row">
+                <div class="col-6">
+                  <ul class="footer-links">
+                    <li><a href="#experience">Expérience</a></li>
+                    <li><a href="#education">Formation</a></li>
+                    <li><a href="#skills">Compétences</a></li>
+                  </ul>
+                </div>
+                <div class="col-6">
+                  <ul class="footer-links">
+                    <li><a href="#projects">Projets</a></li>
+                    <li><a href="#interests">Centres d'intérêts</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+      
+           
+            <div class="col-lg-8 mb-4">
+              <h3 class="footer-title">Contact</h3>
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="contact-info">
+                    <i class="fas fa-phone"></i>
+                    <span>0761 50 27 94</span>
+                  </div>
+                  <div class="contact-info">
+                    <i class="fas fa-envelope"></i>
+                    <span>mouadbrahmi02@gmail.com</span>
+                  </div>
+                  <div class="contact-info">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Brest, France</span>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="social-links">
+                    <a href="https://github.com/mouadbra" class="social-icon">
+                      <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/mouadbra" class="social-icon">
+                      <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="mailto:mouadbrahmi02@gmail.com" class="social-icon">
+                      <i class="fas fa-envelope"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+        
+          <div class="footer-bottom">
+            <p>&copy; 2024 Mouad BRAHMI. Tous droits réservés. Développé avec <i class="fas fa-heart" style="color: #dc2626;"></i></p>
+          </div>
+        </div>
+      </footer>
