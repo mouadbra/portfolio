@@ -142,11 +142,41 @@
             background-color: var(--darker-bg) !important;
         }
 
+ .experience-item {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+        
+        .experience-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.2);
+            border-color: var(--primary-color);
+        }
+        
         /* Experience Timeline */
         .experience-item::before {
             background: var(--primary-color);
         }
-
+        
+        .experience-item h3 {
+            color: var(--light-text);
+            margin-bottom: 0.5rem;
+        }
+        
+        .experience-item a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        .experience-item a:hover {
+            color: var(--hover-color);
+            text-decoration: underline;
+        }
         /* Links */
         a {
             color: var(--primary-color);
@@ -535,20 +565,7 @@
 
 
 
-/* Réduction de la taille des cartes d'intérêts */
-#interests .interest-card {
-    min-height: 300px;
-    padding: 1.5rem;
-}
-
-#interests .interest-icon {
-    width: 60px;
-    height: 60px;
-}
-
-#interests .interest-icon i {
-    font-size: 1.5rem;
-}
+ 
 
 /* Nouveaux styles pour le footer */
 .footer {
@@ -1005,7 +1022,7 @@ section:nth-child(even) {
                     <li class="nav-item"><a class="nav-link" href="#education">Formation</a></li>
                     <li class="nav-item"><a class="nav-link" href="#skills">Compétences</a></li>
                     <li class="nav-item"><a class="nav-link" href="#projects">Projets</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#interests">Centres d'intérêts</a></li>
+                     
                     
                         <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
       
@@ -1023,7 +1040,7 @@ section:nth-child(even) {
                     <li class="nav-item"><a class="nav-link" href="#education">Formation</a></li>
                     <li class="nav-item"><a class="nav-link" href="#skills">Compétences</a></li>
                     <li class="nav-item"><a class="nav-link" href="#projects">Projets</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#interests">Centres d'intérêts</a></li>
+                     
                     
                     
                 </ul>
@@ -1056,17 +1073,34 @@ section:nth-child(even) {
     </section>
 
     <section class="py-5" id="experience">
-        <div class="container">
-            <h2 class="section-title">Expérience Professionnelle</h2>
-            <div class="experience-item">
-                <h3 class="h5">Co-Fondateur et Gérant - 
-                    <a href="https://www.develovr.tech" target="_blank" rel="noopener noreferrer">Develovr</a>
-                </h3>
-                <p class="text-muted">Mars 2024 - Juillet 2024 | Sidi Bel abbés, Algérie</p>
-                <p>Entreprise spécialisée dans la création de solutions logicielles.</p>
+            <div class="container">
+                <h2 class="section-title">Expérience Professionnelle</h2>
+                
+                <div class="experience-item">
+                    <h3 class="h5">Stage – Développeur Fullstack - 
+                        <a href="images/stage.pdf" target="_blank" rel="noopener noreferrer" download>Baklawa Dorée</a>
+                    </h3>
+                    <p class="text-muted">Avril 2025 - Juin 2025 | Brest, France</p>
+                    <p>Développement complet d'un site vitrine avec backoffice administrateur. Gestion projet client, méthodologie SCRUM, architecture MVC. Communication avec client non technique. Technologies : PHP, CodeIgniter, Bootstrap, MySQL, JavaScript.</p>
+                </div>
+                
+                <div class="experience-item">
+                    <h3 class="h5">Co-Fondateur et Gérant - 
+                        <a href="https://www.linkedin.com/company/develovr/about/" target="_blank" rel="noopener noreferrer">Develovr</a>
+                    </h3>
+                    <p class="text-muted">Mars 2024 - Juillet 2024 | Sidi Bel abbés, Algérie</p>
+                    <p>Co-création d'une structure de services informatiques. Gestion d'équipe et coordination projets. Étude de marché et développement compétences entrepreneuriales.</p>
+                </div>
+                
+                <div class="experience-item">
+                    <h3 class="h5">Stage – Analyste Données - 
+                        <a href="https://www.groupe-hasnaoui.com/fr/btph" target="_blank" rel="noopener noreferrer">Groupe BTPH Hasnaoui</a>
+                    </h3>
+                    <p class="text-muted">Décembre 2023 | Sidi Bel Abbes, Algérie</p>
+                    <p>Optimisation des systèmes d'information d'entreprise. Conception modèles de données, développement requêtes SQL complexes, nettoyage de données. Découverte architecture réseau CISCO.</p>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
     <section class="py-5 bg-light" id="education">
         <div class="container">
@@ -1252,7 +1286,74 @@ section:nth-child(even) {
 
 
 
-
+                <!-- OlymPix Project -->
+<div class="project-card" id="olympix">
+    <div class="project-header" onclick="toggleProject(this)">
+        <h3>OlymPix</h3>
+        <div class="expand-icon">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </div>
+    <div class="project-preview">
+        <p>Application web de gestion de concours en ligne</p>
+        <div class="project-tags">
+            <span class="badge bg-primary">SCRUM</span>
+            <span class="badge bg-primary">UML</span>
+            <span class="badge bg-primary">CodeIgniter</span>
+            <span class="badge bg-primary">PHP</span>
+            <span class="badge bg-primary">MariaDB</span>
+            <span class="badge bg-primary">Bootstrap</span>
+            
+        </div>
+    </div>
+    <div class="project-content">
+        <div class="project-gallery">
+            <div class="gallery-main">
+                <img src="images/1.png" alt="OlymPix main" class="main-image">
+            </div>
+            <div class="gallery-thumbs">
+                <img src="images/1.png" alt="OlymPix view 1" onclick="updateMainImage(this)">
+                <img src="images/2.PNG" alt="OlymPix view 1" onclick="updateMainImage(this)">
+                <img src="images/3.PNG" alt="OlymPix view 2" onclick="updateMainImage(this)">
+                <img src="images/4.PNG" alt="OlymPix view 3" onclick="updateMainImage(this)">
+                <img src="images/5.PNG" alt="OlymPix view 3" onclick="updateMainImage(this)">
+                <img src="images/6.PNG" alt="OlymPix view 3" onclick="updateMainImage(this)">
+                <img src="images/7.PNG" alt="OlymPix view 3" onclick="updateMainImage(this)">
+                <img src="images/8.PNG" alt="OlymPix view 3" onclick="updateMainImage(this)">
+                <img src="images/9.PNG" alt="OlymPix view 3" onclick="updateMainImage(this)">
+                <img src="images/10.PNG" alt="OlymPix view 3" onclick="updateMainImage(this)">
+            </div>
+        </div>
+        <div class="project-description">
+            <h4>Description</h4>
+            <p>
+                OlymPix est une application web conçue pour gérer les concours en ligne avec des profils utilisateurs
+                distincts : visiteur, candidat, jury, et administrateur. Elle utilise CodeIgniter pour le back-end et
+                Bootstrap pour le front-end, offrant une interface intuitive et responsive.
+            </p>
+            <div class="project-features">
+                <h4>Fonctionnalités</h4>
+                <ul>
+                    <li>Gestion des concours et des utilisateurs</li>
+                    <li>Automatisation des tâches avec SQL (triggers, procédures)</li>
+                    <li>Interface responsive adaptée à tous les acteurs</li>
+                </ul>
+            </div>
+            <div class="project-methodology">
+                <h4>Méthodologie</h4>
+                <p>
+                    Développement réalisé selon Scrum, avec modélisation UML pour garantir une architecture solide.
+                </p>
+            </div>
+            <div class="source-button text-center">
+                <a href="https://github.com/mouadbra/olympix" class="btn btn-primary rounded-pill px-4 py-2 d-inline-flex align-items-center gap-2 transition-all hover:shadow-lg">
+                    <i class="fab fa-github"></i>
+                    <span>Code source</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
 
 
                 <!-- BrightMinds Project -->
@@ -1330,74 +1431,7 @@ section:nth-child(even) {
 
 
 
-                <!-- OlymPix Project -->
-<div class="project-card" id="olympix">
-    <div class="project-header" onclick="toggleProject(this)">
-        <h3>OlymPix</h3>
-        <div class="expand-icon">
-            <i class="fas fa-chevron-down"></i>
-        </div>
-    </div>
-    <div class="project-preview">
-        <p>Application web de gestion de concours en ligne</p>
-        <div class="project-tags">
-            <span class="badge bg-primary">SCRUM</span>
-            <span class="badge bg-primary">UML</span>
-            <span class="badge bg-primary">CodeIgniter</span>
-            <span class="badge bg-primary">PHP</span>
-            <span class="badge bg-primary">MariaDB</span>
-            <span class="badge bg-primary">Bootstrap</span>
-            
-        </div>
-    </div>
-    <div class="project-content">
-        <div class="project-gallery">
-            <div class="gallery-main">
-                <img src="images/1.png" alt="OlymPix main" class="main-image">
-            </div>
-            <div class="gallery-thumbs">
-                <img src="images/1.png" alt="OlymPix view 1" onclick="updateMainImage(this)">
-                <img src="images/2.PNG" alt="OlymPix view 1" onclick="updateMainImage(this)">
-                <img src="images/3.PNG" alt="OlymPix view 2" onclick="updateMainImage(this)">
-                <img src="images/4.PNG" alt="OlymPix view 3" onclick="updateMainImage(this)">
-                <img src="images/5.PNG" alt="OlymPix view 3" onclick="updateMainImage(this)">
-                <img src="images/6.PNG" alt="OlymPix view 3" onclick="updateMainImage(this)">
-                <img src="images/7.PNG" alt="OlymPix view 3" onclick="updateMainImage(this)">
-                <img src="images/8.PNG" alt="OlymPix view 3" onclick="updateMainImage(this)">
-                <img src="images/9.PNG" alt="OlymPix view 3" onclick="updateMainImage(this)">
-                <img src="images/10.PNG" alt="OlymPix view 3" onclick="updateMainImage(this)">
-            </div>
-        </div>
-        <div class="project-description">
-            <h4>Description</h4>
-            <p>
-                OlymPix est une application web conçue pour gérer les concours en ligne avec des profils utilisateurs
-                distincts : visiteur, candidat, jury, et administrateur. Elle utilise CodeIgniter pour le back-end et
-                Bootstrap pour le front-end, offrant une interface intuitive et responsive.
-            </p>
-            <div class="project-features">
-                <h4>Fonctionnalités</h4>
-                <ul>
-                    <li>Gestion des concours et des utilisateurs</li>
-                    <li>Automatisation des tâches avec SQL (triggers, procédures)</li>
-                    <li>Interface responsive adaptée à tous les acteurs</li>
-                </ul>
-            </div>
-            <div class="project-methodology">
-                <h4>Méthodologie</h4>
-                <p>
-                    Développement réalisé selon Scrum, avec modélisation UML pour garantir une architecture solide.
-                </p>
-            </div>
-            <div class="source-button text-center">
-                <a href="https://github.com/mouadbra/olympix" class="btn btn-primary rounded-pill px-4 py-2 d-inline-flex align-items-center gap-2 transition-all hover:shadow-lg">
-                    <i class="fab fa-github"></i>
-                    <span>Code source</span>
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
+
 
 
 
@@ -1604,7 +1638,54 @@ section:nth-child(even) {
 
 
 
-
+ <div class="project-card" id="excel-automation">
+                    <div class="project-header" onclick="toggleProject(this)">
+                        <h3>Automatisation Excel avec Python et APIs</h3>
+                        <div class="expand-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="project-preview">
+                        <p>Outil Python pour automatiser la création de rapports Excel à partir de données API en temps réel</p>
+                        <div class="project-tags">
+                            <span class="badge bg-primary">Python</span>
+                            <span class="badge bg-success">OpenPyXL</span>
+                            <span class="badge bg-info">APIs REST</span>
+                            <span class="badge bg-warning">Automatisation</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-description d-flex">
+                            <div class="description-text" style="flex: 1;">
+                                <h4>Description</h4>
+                                <p>
+                                    Projet personnel (2025) démontrant l'automatisation des opérations Excel avec Python et la bibliothèque OpenPyXL, intégrant des données en temps réel depuis des APIs. Solution cross-platform compatible avec Windows, Mac et Linux.
+                                </p>
+                                <h4>Méthodologie</h4>
+                                <p>
+                                    Développement d'un système modulaire avec gestion de configuration, client API générique, et gestionnaire Excel. Utilisation de l'API OpenWeatherMap comme exemple d'intégration, avec planification automatique des mises à jour.
+                                </p>
+                            </div>
+                            <div class="description-features" style="flex: 1;">
+                                <h4>Fonctionnalités</h4>
+                                <ul>
+                                    <li>Création et modification programmatique de fichiers Excel</li>
+                                    <li>Récupération de données depuis APIs externes</li>
+                                    <li>Mises à jour automatisées avec planification</li>
+                                    <li>Nettoyage et maintenance des données</li>
+                                    <li>Génération de feuilles de synthèse</li>
+                                    <li>Compatibilité cross-platform</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="source-button text-center">
+                            <a href="https://github.com/mouadbra/excel-automation" class="btn btn-primary rounded-pill px-4 py-2 d-inline-flex align-items-center gap-2 transition-all hover:shadow-lg">
+                                <i class="fab fa-github"></i>
+                                <span>Code source</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
 
 
@@ -1872,46 +1953,7 @@ function updateMainImage(thumb) {
 }
 </script>
 
-    <section class="py-5" id="interests">
-        <div class="container">
-            <h2 class="section-title mb-5">Centres d'Intérêts</h2>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="interest-card">
-                        <div class="interest-content">
-                            <div class="interest-icon">
-                                <i class="fas fa-futbol"></i>
-                            </div>
-                            <h3 class="h5">Football</h3>
-                            <p>Mon sport préféré, synonyme de plaisir, de passion du jeu et d'esprit d'équipe.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="interest-card">
-                        <div class="interest-content">
-                            <div class="interest-icon">
-                                <i class="fas fa-gamepad"></i>
-                            </div>
-                            <h3 class="h5">Jeux Vidéo</h3>
-                            <p>Un moyen de détente, d'exploration et de créativité.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="interest-card">
-                        <div class="interest-content">
-                            <div class="interest-icon">
-                                <i class="fas fa-brain"></i>
-                            </div>
-                            <h3 class="h5">Intelligence Artificielle</h3>
-                            <p>Passionné par son potentiel révolutionnaire et curieux de ses impacts futurs.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+ 
     
 
     <footer class="footer">
@@ -1932,7 +1974,7 @@ function updateMainImage(thumb) {
                                 <ul class="footer-links">
                                     <li><a href="#skills">Compétences</a></li>
                                     <li><a href="#projects">Projets</a></li>
-                                    <li><a href="#interests">Intérêts</a></li>
+                                
                                 </ul>
                             </div>
                         </div>
