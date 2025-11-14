@@ -1082,15 +1082,10 @@ section:nth-child(even) {
                         <div class="experience-content">
                             <h3 class="h5">Stage – Développeur Fullstack - Baklawa Dorée</h3>
                             <p class="text-muted">Avril 2025 - Juin 2025 | Brest, France</p>
-                            <p>Développement complet d'un site vitrine avec backoffice administrateur. Gestion projet client, méthodologie SCRUM, architecture MVC.
-                                Technologies : PHP, CodeIgniter, Bootstrap, MySQL, JavaScript.</p>
+                      <p>Conception et développement d'un back-office de gestion pour un commerce local. Gestion projet client, méthodologie SCRUM, architecture MVC.
+                        Technologies : PHP, CodeIgniter, Bootstrap, MySQL, JavaScript.</p>
                         </div>
-                        <div class="experience-action mt-3 mt-md-0">
-                            <a href="images/stage.pdf" target="_blank" rel="noopener noreferrer" download class="btn btn-outline-primary btn-sm d-inline-flex align-items-center gap-2">
-                                <i class="fas fa-file-pdf"></i>
-                                <span>Voir la présentation</span>
-                            </a>
-                        </div>
+                 
                     </div>
                 </div>
                 
@@ -1286,99 +1281,53 @@ section:nth-child(even) {
         </div>
     </section>
 
-    <section class="py-5 bg-light" id="projects">
+   <section class="py-5" id="projects">
         <div class="container">
             <h2 class="section-title">Projets</h2>
             <div class="projects-grid">
+                <!-- Projet 1 - OlymPix (Visible) -->
+                <div class="project-card" data-project-index="1">
+                    <div class="project-header" onclick="toggleProject(this)">
+                        <h3>OlymPix</h3>
+                        <div class="expand-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="project-preview">
+                        <p>Application web de gestion de concours en ligne</p>
+                        <div class="project-tags">
+                            <span class="badge bg-primary">SCRUM</span>
+                            <span class="badge bg-primary">UML</span>
+                            <span class="badge bg-primary">CodeIgniter</span>
+                            <span class="badge bg-primary">PHP</span>
+                            <span class="badge bg-primary">MariaDB</span>
+                            <span class="badge bg-primary">Bootstrap</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-description">
+                            <h4>Description</h4>
+                            <p>OlymPix est une application web conçue pour gérer les concours en ligne avec des profils utilisateurs distincts : visiteur, candidat, jury, et administrateur.</p>
+                            <div class="project-features">
+                                <h4>Fonctionnalités</h4>
+                                <ul>
+                                    <li>Gestion des concours et des utilisateurs</li>
+                                    <li>Automatisation des tâches avec SQL (triggers, procédures)</li>
+                                    <li>Interface responsive adaptée à tous les acteurs</li>
+                                </ul>
+                            </div>
+                            <div class="source-button text-center">
+                                <a href="https://github.com/mouadbra/olympix" class="btn btn-primary rounded-pill px-4 py-2 d-inline-flex align-items-center gap-2">
+                                    <i class="fab fa-github"></i>
+                                    <span>Code source</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                <!-- OlymPix Project -->
-<div class="project-card" id="olympix">
-    <div class="project-header" onclick="toggleProject(this)">
-        <h3>OlymPix</h3>
-        <div class="expand-icon">
-            <i class="fas fa-chevron-down"></i>
-        </div>
-    </div>
-    <div class="project-preview">
-        <p>Application web de gestion de concours en ligne</p>
-        <div class="project-tags">
-            <span class="badge bg-primary">SCRUM</span>
-            <span class="badge bg-primary">UML</span>
-            <span class="badge bg-primary">CodeIgniter</span>
-            <span class="badge bg-primary">PHP</span>
-            <span class="badge bg-primary">MariaDB</span>
-            <span class="badge bg-primary">Bootstrap</span>
-            
-        </div>
-    </div>
-    <div class="project-content">
-        <div class="project-gallery">
-            <div class="gallery-main">
-                <img src="images/1.png" alt="OlymPix main" class="main-image">
-            </div>
-            <div class="gallery-thumbs">
-                <img src="images/1.png" alt="OlymPix view 1" onclick="updateMainImage(this)">
-                <img src="images/2.PNG" alt="OlymPix view 1" onclick="updateMainImage(this)">
-                <img src="images/3.PNG" alt="OlymPix view 2" onclick="updateMainImage(this)">
-                <img src="images/4.PNG" alt="OlymPix view 3" onclick="updateMainImage(this)">
-                <img src="images/5.PNG" alt="OlymPix view 3" onclick="updateMainImage(this)">
-                <img src="images/6.PNG" alt="OlymPix view 3" onclick="updateMainImage(this)">
-                <img src="images/7.PNG" alt="OlymPix view 3" onclick="updateMainImage(this)">
-                <img src="images/8.PNG" alt="OlymPix view 3" onclick="updateMainImage(this)">
-                <img src="images/9.PNG" alt="OlymPix view 3" onclick="updateMainImage(this)">
-                <img src="images/10.PNG" alt="OlymPix view 3" onclick="updateMainImage(this)">
-            </div>
-        </div>
-        <div class="project-description">
-            <h4>Description</h4>
-            <p>
-                OlymPix est une application web conçue pour gérer les concours en ligne avec des profils utilisateurs
-                distincts : visiteur, candidat, jury, et administrateur. Elle utilise CodeIgniter pour le back-end et
-                Bootstrap pour le front-end, offrant une interface intuitive et responsive.
-            </p>
-            <div class="project-features">
-                <h4>Fonctionnalités</h4>
-                <ul>
-                    <li>Gestion des concours et des utilisateurs</li>
-                    <li>Automatisation des tâches avec SQL (triggers, procédures)</li>
-                    <li>Interface responsive adaptée à tous les acteurs</li>
-                </ul>
-            </div>
-            <div class="project-methodology">
-                <h4>Méthodologie</h4>
-                <p>
-                    Développement réalisé selon Scrum, avec modélisation UML pour garantir une architecture solide.
-                </p>
-            </div>
-            <div class="source-button text-center">
-                <a href="https://github.com/mouadbra/olympix" class="btn btn-primary rounded-pill px-4 py-2 d-inline-flex align-items-center gap-2 transition-all hover:shadow-lg">
-                    <i class="fab fa-github"></i>
-                    <span>Code source</span>
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-                <!-- BrightMinds Project -->
- <div class="project-card" id="brightminds">
+                <!-- Projet 2 - BrightMinds (Visible) -->
+                <div class="project-card" data-project-index="2">
                     <div class="project-header" onclick="toggleProject(this)">
                         <h3>BrightMinds</h3>
                         <div class="expand-icon">
@@ -1395,24 +1344,9 @@ section:nth-child(even) {
                         </div>
                     </div>
                     <div class="project-content">
-                        <div class="project-gallery">
-                            <div class="gallery-main">
-                                <img src="images/BX.PNG" alt="BrightMinds main" class="main-image">
-                            </div>
-                            <div class="gallery-thumbs">
-                                 
-                                <img src="images/BX.PNG" alt="BrightMinds view 2" onclick="updateMainImage(this)">
-                                <img src="images/bx2.PNG" alt="BrightMinds view 3" onclick="updateMainImage(this)">
-                            </div>
-                        </div>
                         <div class="project-description">
                             <h4>Description</h4>
-                            <p>
-                                BrightMinds est une plateforme e-Learning permettant aux enseignants de proposer des cours,
-                                aux étudiants d'acheter et suivre des formations, et aux administrateurs de gérer les
-                                statistiques. L'application Android offre une interface fluide pour accéder aux cours,
-                                suivre la progression et acheter de nouvelles formations.
-                            </p>
+                            <p>BrightMinds est une plateforme e-Learning permettant aux enseignants de proposer des cours, aux étudiants d'acheter et suivre des formations.</p>
                             <div class="project-features">
                                 <h4>Fonctionnalités</h4>
                                 <ul>
@@ -1421,245 +1355,125 @@ section:nth-child(even) {
                                     <li>Interface mobile optimisée</li>
                                 </ul>
                             </div>
-                            <div class="project-methodology">
-                                <h4>Méthodologie</h4>
-                                <p>
-                                    Projet développé avec la méthodologie agile (SCRUM) pour garantir une application
-                                    performante et évolutive.
-                                </p>
-                            </div>
- 
                         </div>
                     </div>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- VOD Project -->
- 
-<div class="project-card" id="vod">
-    <div class="project-header" onclick="toggleProject(this)">
-        <h3>VOD</h3>
-        <div class="expand-icon">
-            <i class="fas fa-chevron-down"></i>
-        </div>
-    </div>
-    <div class="project-preview">
-        <p>Application Java de gestion de location de films </p>
-        <div class="project-tags">
-            <span class="badge bg-primary">Java</span>
-            <span class="badge bg-primary">JavaFX</span>
-            <span class="badge bg-primary">UML</span>
-            <span class="badge bg-primary">Tests Unitaires</span>
-        </div>
-    </div>
-    <div class="project-content">
-        <div class="project-description d-flex">
-            <div class="description-text" style="flex: 1;">
-                <h4>Description</h4>
-                <p>
-                    Application Java pour la location de films , incluant navigation, réservation, et avis utilisateur. Les administrateurs gèrent le catalogue.
-                </p>
-                <h4>Méthodologie</h4>
-                <p>
-                    Développement avec Java/JavaFX, persistance des données et tests unitaires pour assurer la qualité.
-                </p>
-            </div>
-            <div class="description-features" style="flex: 1;">
-                <h4>Fonctionnalités</h4>
-                <ul>
-                    <li>Gestion des utilisateurs et réservations</li>
-                    <li>Critiques et notes des films</li>
-                    <li>Interface admin pour le catalogue</li>
-                </ul>
-            </div>
-        </div>
-        <div class="source-button text-center">
-            <a href="https://github.com/mouadbra/VOD" class="btn btn-primary rounded-pill px-4 py-2 d-inline-flex align-items-center gap-2 transition-all hover:shadow-lg">
-                <i class="fab fa-github"></i>
-                <span>Code source</span>
-            </a>
-        </div>
-    </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="project-card" id="toutlameche">
-    <div class="project-header" onclick="toggleProject(this)">
-        <h3>Toutlameche</h3>
-        <div class="expand-icon">
-            <i class="fas fa-chevron-down"></i>
-        </div>
-    </div>
-    <div class="project-preview">
-        <p>Application de prédiction de mots basée sur les N-grammes</p>
-        <div class="project-tags">
-            <span class="badge bg-primary">C</span>
- 
-        </div>
-    </div>
-    <div class="project-content">
-        <div class="project-description d-flex">
-            <div class="description-text" style="flex: 1;">
-                <h4>Description</h4>
-                <p>
-                    Application terminale en C utilisant des N-grammes pour prédire les mots suivants dans une séquence textuelle. Elle construit dynamiquement une base de données sous forme d'arbre.
-                </p>
-                <h4>Méthodologie</h4>
-                <p>
-                    Algorithme basé sur les N-grammes, gestion dynamique de la mémoire, sérialisation personnalisée pour persistance des données.
-                </p>
-            </div>
-            <div class="description-features" style="flex: 1;">
-                <h4>Fonctionnalités</h4>
-                <ul>
-                    <li>Prédiction de mots via N-grammes</li>
-              
-                    <li>Sauvegarde et chargement des données</li>
-                    <li>Interface utilisateur en terminal</li>
-                </ul>
-            </div>
-        </div>
-        <div class="source-button text-center">
-            <a href="https://github.com/mouadbra/toutlameche" class="btn btn-primary rounded-pill px-4 py-2 d-inline-flex align-items-center gap-2 transition-all hover:shadow-lg">
-                <i class="fab fa-github"></i>
-                <span>Code source</span>
-            </a>
-        </div>
-    </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <div class="project-card" id="ml-dl-l3">
-                <div class="project-header" onclick="toggleProject(this)">
-                    <h3>Projets Machine Learning / Deep Learning</h3>
-                    <div class="expand-icon">
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
                 </div>
-                <div class="project-preview">
-                    <p>Implémentation de modèles de ML/DL sur plusieurs jeux de données</p>
-                    <div class="project-tags">
-                        <span class="badge bg-success">Python</span>
-                        <span class="badge bg-info">Scikit-learn</span>
-                        <span class="badge bg-warning">TensorFlow</span>
+
+                <!-- Projet 3 - VOD (Visible) -->
+                <div class="project-card" data-project-index="3">
+                    <div class="project-header" onclick="toggleProject(this)">
+                        <h3>VOD</h3>
+                        <div class="expand-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
                     </div>
-                </div>
-                <div class="project-content">
-                    <div class="project-description d-flex">
-                        <div class="description-text" style="flex: 1;">
+                    <div class="project-preview">
+                        <p>Application Java de gestion de location de films</p>
+                        <div class="project-tags">
+                            <span class="badge bg-primary">Java</span>
+                            <span class="badge bg-primary">JavaFX</span>
+                            <span class="badge bg-primary">UML</span>
+                            <span class="badge bg-primary">Tests Unitaires</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-description">
                             <h4>Description</h4>
-                            <p>
-                                Projet académique réalisé en L3 à l'UBO (décembre 2024) visant à implémenter et évaluer des modèles supervisés de régression et classification sur différents jeux de données.
-                            </p>
-                            <h4>Méthodologie</h4>
-                            <p>
-                                Utilisation de pipelines d'entraînement en Python avec Scikit-learn et TensorFlow, application de techniques d'ensemble (bagging, random forests), et évaluation par métriques comme la précision et le RMSE, accompagnée de visualisations.
-                            </p>
+                            <p>Application Java pour la location de films, incluant navigation, réservation, et avis utilisateur.</p>
+                            <div class="project-features">
+                                <h4>Fonctionnalités</h4>
+                                <ul>
+                                    <li>Gestion des utilisateurs et réservations</li>
+                                    <li>Critiques et notes des films</li>
+                                    <li>Interface admin pour le catalogue</li>
+                                </ul>
+                            </div>
+                            <div class="source-button text-center">
+                                <a href="https://github.com/mouadbra/VOD" class="btn btn-primary rounded-pill px-4 py-2 d-inline-flex align-items-center gap-2">
+                                    <i class="fab fa-github"></i>
+                                    <span>Code source</span>
+                                </a>
+                            </div>
                         </div>
-                        <div class="description-features" style="flex: 1;">
-                            <h4>Fonctionnalités</h4>
-                            <ul>
-                                <li>Classification avec MLP, CNN sur MNIST et CIFAR-10</li>
-                                <li>Régression sur California Housing</li>
-                                <li>Utilisation de forêts aléatoires, arbres de décision</li>
-                                <li>Évaluation par courbes et métriques standards</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="source-button text-center">
-                        <a href="https://github.com/mouadbra/TP1_MachineLearning" class="btn btn-primary rounded-pill px-4 py-2 d-inline-flex align-items-center gap-2 transition-all hover:shadow-lg">
-                            <i class="fab fa-github"></i>
-                            <span>Code source</span>
-                        </a>
                     </div>
                 </div>
-            </div>
 
+                <!-- Projet 4 - Toutlameche (Caché) -->
+                <div class="project-card hidden-project" data-project-index="4">
+                    <div class="project-header" onclick="toggleProject(this)">
+                        <h3>Toutlameche</h3>
+                        <div class="expand-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="project-preview">
+                        <p>Application de prédiction de mots basée sur les N-grammes</p>
+                        <div class="project-tags">
+                            <span class="badge bg-primary">C</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-description">
+                            <h4>Description</h4>
+                            <p>Application terminale en C utilisant des N-grammes pour prédire les mots suivants dans une séquence textuelle.</p>
+                            <div class="project-features">
+                                <h4>Fonctionnalités</h4>
+                                <ul>
+                                    <li>Prédiction de mots via N-grammes</li>
+                                    <li>Sauvegarde et chargement des données</li>
+                                    <li>Interface utilisateur en terminal</li>
+                                </ul>
+                            </div>
+                            <div class="source-button text-center">
+                                <a href="https://github.com/mouadbra/toutlameche" class="btn btn-primary rounded-pill px-4 py-2 d-inline-flex align-items-center gap-2">
+                                    <i class="fab fa-github"></i>
+                                    <span>Code source</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
+                <!-- Projet 5 - ML/DL (Caché) -->
+                <div class="project-card hidden-project" data-project-index="5">
+                    <div class="project-header" onclick="toggleProject(this)">
+                        <h3>Projets Machine Learning / Deep Learning</h3>
+                        <div class="expand-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="project-preview">
+                        <p>Implémentation de modèles de ML/DL sur plusieurs jeux de données</p>
+                        <div class="project-tags">
+                            <span class="badge bg-success">Python</span>
+                            <span class="badge bg-info">Scikit-learn</span>
+                            <span class="badge bg-warning">TensorFlow</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-description">
+                            <h4>Description</h4>
+                            <p>Projet académique visant à implémenter et évaluer des modèles supervisés de régression et classification.</p>
+                            <div class="project-features">
+                                <h4>Fonctionnalités</h4>
+                                <ul>
+                                    <li>Classification avec MLP, CNN sur MNIST et CIFAR-10</li>
+                                    <li>Régression sur California Housing</li>
+                                    <li>Utilisation de forêts aléatoires, arbres de décision</li>
+                                </ul>
+                            </div>
+                            <div class="source-button text-center">
+                                <a href="https://github.com/mouadbra/TP1_MachineLearning" class="btn btn-primary rounded-pill px-4 py-2 d-inline-flex align-items-center gap-2">
+                                    <i class="fab fa-github"></i>
+                                    <span>Code source</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
- <div class="project-card" id="excel-automation">
+                <!-- Projet 6 - Excel Automation (Caché) -->
+                <div class="project-card hidden-project" data-project-index="6">
                     <div class="project-header" onclick="toggleProject(this)">
                         <h3>Automatisation Excel avec Python et APIs</h3>
                         <div class="expand-icon">
@@ -1667,7 +1481,7 @@ section:nth-child(even) {
                         </div>
                     </div>
                     <div class="project-preview">
-                        <p>Outil Python pour automatiser la création de rapports Excel à partir de données API en temps réel</p>
+                        <p>Outil Python pour automatiser la création de rapports Excel à partir de données API</p>
                         <div class="project-tags">
                             <span class="badge bg-primary">Python</span>
                             <span class="badge bg-success">OpenPyXL</span>
@@ -1676,45 +1490,100 @@ section:nth-child(even) {
                         </div>
                     </div>
                     <div class="project-content">
-                        <div class="project-description d-flex">
-                            <div class="description-text" style="flex: 1;">
-                                <h4>Description</h4>
-                                <p>
-                                    Projet personnel (2025) démontrant l'automatisation des opérations Excel avec Python et la bibliothèque OpenPyXL, intégrant des données en temps réel depuis des APIs. Solution cross-platform compatible avec Windows, Mac et Linux.
-                                </p>
-                                <h4>Méthodologie</h4>
-                                <p>
-                                    Développement d'un système modulaire avec gestion de configuration, client API générique, et gestionnaire Excel. Utilisation de l'API OpenWeatherMap comme exemple d'intégration, avec planification automatique des mises à jour.
-                                </p>
-                            </div>
-                            <div class="description-features" style="flex: 1;">
+                        <div class="project-description">
+                            <h4>Description</h4>
+                            <p>Projet démontrant l'automatisation des opérations Excel avec Python et la bibliothèque OpenPyXL.</p>
+                            <div class="project-features">
                                 <h4>Fonctionnalités</h4>
                                 <ul>
                                     <li>Création et modification programmatique de fichiers Excel</li>
                                     <li>Récupération de données depuis APIs externes</li>
                                     <li>Mises à jour automatisées avec planification</li>
-                                    <li>Nettoyage et maintenance des données</li>
-                                    <li>Génération de feuilles de synthèse</li>
                                     <li>Compatibilité cross-platform</li>
                                 </ul>
                             </div>
-                        </div>
-                        <div class="source-button text-center">
-                            <a href="https://github.com/mouadbra/excel-automation" class="btn btn-primary rounded-pill px-4 py-2 d-inline-flex align-items-center gap-2 transition-all hover:shadow-lg">
-                                <i class="fab fa-github"></i>
-                                <span>Code source</span>
-                            </a>
+                            <div class="source-button text-center">
+                                <a href="https://github.com/mouadbra/excel-automation" class="btn btn-primary rounded-pill px-4 py-2 d-inline-flex align-items-center gap-2">
+                                    <i class="fab fa-github"></i>
+                                    <span>Code source</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
+            </div>
 
-
-
-
-  </div>
-  </div>
-  
+            <!-- Bouton Afficher Plus -->
+            <div class="show-more-container">
+                <button class="btn-show-more" onclick="toggleProjects()">
+                    Afficher plus de projets
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+            </div>
+        </div>
     </section>
+
+    <script>
+        function toggleProject(header) {
+            const card = header.closest('.project-card');
+            const wasExpanded = card.classList.contains('expanded');
+            
+            document.querySelectorAll('.project-card').forEach(card => {
+                card.classList.remove('expanded');
+            });
+            
+            if (!wasExpanded) {
+                card.classList.add('expanded');
+                setTimeout(() => {
+                    card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 100);
+            }
+        }
+
+        function updateMainImage(thumb) {
+            const mainImage = thumb.closest('.project-gallery').querySelector('.main-image');
+            mainImage.style.opacity = '0';
+            
+            setTimeout(() => {
+                mainImage.src = thumb.src;
+                mainImage.style.opacity = '1';
+            }, 300);
+            
+            thumb.closest('.gallery-thumbs').querySelectorAll('img').forEach(img => {
+                img.classList.remove('active');
+            });
+            thumb.classList.add('active');
+        }
+
+        function toggleProjects() {
+            const hiddenProjects = document.querySelectorAll('.project-card.hidden-project');
+            const button = document.querySelector('.btn-show-more');
+            const isShowingMore = button.classList.contains('showing-less');
+            
+            hiddenProjects.forEach((project, index) => {
+                if (isShowingMore) {
+                    setTimeout(() => {
+                        project.classList.add('hidden-project');
+                    }, index * 100);
+                } else {
+                    setTimeout(() => {
+                        project.classList.remove('hidden-project');
+                    }, index * 100);
+                }
+            });
+            
+            if (isShowingMore) {
+                button.innerHTML = 'Afficher plus de projets <i class="fas fa-chevron-down"></i>';
+                button.classList.remove('showing-less');
+                setTimeout(() => {
+                    document.querySelector('#projects').scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 300);
+            } else {
+                button.innerHTML = 'Afficher moins <i class="fas fa-chevron-up"></i>';
+                button.classList.add('showing-less');
+            }
+        }
+    </script>
     
 
 
@@ -2096,3 +1965,278 @@ function updateMainImage(thumb) {
       });
 
     </script>
+       <style>
+        :root {
+            --primary-color: #3b82f6;
+            --dark-bg: #0f172a;
+            --darker-bg: #1e293b;
+            --light-text: #e2e8f0;
+            --gray-text: #94a3b8;
+            --card-bg: #1e293b;
+            --hover-color: #2563eb;
+            --border-color: #334155;
+        }
+        
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            color: var(--light-text);
+            background-color: var(--dark-bg);
+            padding: 2rem 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--light-text);
+            margin-bottom: 3rem;
+            position: relative;
+            padding-bottom: 1rem;
+            text-align: center;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        .projects-grid {
+            display: grid;
+            gap: 2.5rem;
+            margin-top: 2rem;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .project-card {
+            background: var(--darker-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            position: relative;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .project-card.hidden-project {
+            display: none;
+        }
+
+        .project-card:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            bottom: -1rem;
+            left: 5%;
+            right: 5%;
+            height: 2px;
+            background: linear-gradient(to right, transparent, var(--primary-color), transparent);
+            opacity: 0.8;
+        }
+
+        .project-header {
+            padding: 1rem 1.25rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            background: linear-gradient(145deg, var(--card-bg), var(--darker-bg));
+        }
+
+        .project-header h3 {
+            margin: 0;
+            color: var(--light-text);
+            font-size: 1.1rem;
+        }
+
+        .expand-icon {
+            transition: transform 0.3s ease;
+        }
+
+        .project-card.expanded .expand-icon {
+            transform: rotate(180deg);
+        }
+
+        .project-preview {
+            padding: 0 1.25rem 1.25rem;
+        }
+
+        .project-preview p {
+            color: var(--gray-text);
+            margin-bottom: 1rem;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .badge {
+            padding: 0.5em 1em;
+            border-radius: 0.5rem;
+            font-weight: 500;
+        }
+
+        .badge.bg-primary {
+            background-color: var(--primary-color) !important;
+        }
+
+        .badge.bg-success {
+            background-color: #10b981 !important;
+        }
+
+        .badge.bg-info {
+            background-color: #06b6d4 !important;
+        }
+
+        .badge.bg-warning {
+            background-color: #f59e0b !important;
+        }
+
+        .project-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease;
+        }
+
+        .project-card.expanded .project-content {
+            max-height: 2000px;
+        }
+
+        .project-gallery {
+            padding: 1.25rem;
+            background: var(--dark-bg);
+        }
+
+        .gallery-main {
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            overflow: hidden;
+            max-height: 300px;
+        }
+
+        .gallery-main img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery-thumbs {
+            display: flex;
+            gap: 0.5rem;
+            overflow-x: auto;
+            padding-bottom: 0.5rem;
+        }
+
+        .gallery-thumbs img {
+            width: 60px;
+            height: 45px;
+            object-fit: cover;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery-thumbs img:hover {
+            opacity: 0.8;
+        }
+
+        .project-description {
+            padding: 1.25rem;
+        }
+
+        .project-description h4 {
+            font-size: 1rem;
+            margin-bottom: 0.75rem;
+            color: var(--light-text);
+        }
+
+        .project-description p {
+            color: var(--gray-text);
+            line-height: 1.6;
+        }
+
+        .project-description ul {
+            color: var(--gray-text);
+            line-height: 1.8;
+        }
+
+        .source-button {
+            margin-top: 1.5rem;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--hover-color);
+            border-color: var(--hover-color);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+        }
+
+        /* Bouton Afficher Plus */
+        .show-more-container {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+        }
+
+        .btn-show-more {
+            background: linear-gradient(145deg, var(--primary-color), var(--hover-color));
+            color: var(--light-text);
+            border: none;
+            padding: 0.875rem 2.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+        }
+
+        .btn-show-more:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(59, 130, 246, 0.5);
+        }
+
+        .btn-show-more i {
+            margin-left: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .btn-show-more.showing-less i {
+            transform: rotate(180deg);
+        }
+
+        .show-more-container.hidden {
+            display: none;
+        }
+
+        @media (min-width: 768px) {
+            .project-content {
+                display: grid;
+                grid-template-columns: 45% 55%;
+                gap: 1.5rem;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .project-gallery,
+            .project-description {
+                padding: 1rem;
+            }
+        }
+    </style>
